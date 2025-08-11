@@ -12,16 +12,17 @@ VALUES
 (2, 'Jane Smith', 'https://example.com/images/jane.jpg', 62000.50),
 (3, 'David Lee', 'https://example.com/images/david.jpg', 47000.75);
 
--- Select all employee records from the table
+
 SELECT employee_id, name, image_url, salary
 FROM employees;
 
--- Example: Update an employee's salary
+
 UPDATE employees
 SET salary = 60000.00              
 WHERE employee_id = 1;               
 
--- Example: Delete an employee from the table
+
 DELETE FROM employees
 WHERE employee_id = 3;               
+
 
