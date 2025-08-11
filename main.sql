@@ -1,0 +1,27 @@
+-- Create a table named 'employees'
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,        -- Unique identifier for each employee
+    name VARCHAR(100) NOT NULL,          -- Employee's full name
+    image_url VARCHAR(255),              -- Link or path to the employee's image
+    salary DECIMAL(10,2) NOT NULL        -- Salary in numeric format with 2 decimal places
+);
+
+-- Insert sample employee data into the table
+INSERT INTO employees (employee_id, name, image_url, salary)
+VALUES
+(1, 'John Doe', 'https://example.com/images/john.jpg', 55000.00),
+(2, 'Jane Smith', 'https://example.com/images/jane.jpg', 62000.50),
+(3, 'David Lee', 'https://example.com/images/david.jpg', 47000.75);
+
+-- Select all employee records from the table
+SELECT employee_id, name, image_url, salary
+FROM employees;
+
+-- Example: Update an employee's salary
+UPDATE employees
+SET salary = 60000.00                -- New salary value
+WHERE employee_id = 1;               -- Condition to match the correct employee
+
+-- Example: Delete an employee from the table
+DELETE FROM employees
+WHERE employee_id = 3;                -- Remove the record where ID = 3
